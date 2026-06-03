@@ -6,7 +6,7 @@ class Idea {
     var ideaName: String
     var content: String
     var date: Date
-    var color: String           // 必须存在
+    var color: String
 
     init(ideaName: String, content: String, date: Date, color: String = "Short-Term") {
         self.ideaName = ideaName

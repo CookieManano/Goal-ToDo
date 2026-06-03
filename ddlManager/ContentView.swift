@@ -8,7 +8,7 @@ struct ContentView: View {
                 IdeaList()
             }
             Tab("ToDo",systemImage:"long.text.page.and.pencil"){
-                
+                TodoList()
             }
             Tab("User",systemImage:"person"){
                 

@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D8B4CF7C2FCEDF9600A20287 /* Untitled.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4CF7B2FCEDF9500A20287 /* Untitled.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D814D43B2FC81A13002E08BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D814D42B2FC81A12002E08BC /* ddlManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddlManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D814D43A2FC81A13002E08BC /* ddlManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ddlManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D814D4442FC81A13002E08BC /* ddlManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ddlManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D879777B2FCEFC5A00E0370F /* ddlManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddlManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D879777C2FCEFC5A00E0370F /* ddlManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ddlManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D879777D2FCEFC5A00E0370F /* ddlManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ddlManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B4CF7B2FCEDF9500A20287 /* Untitled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Untitled.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -78,18 +83,11 @@
 				D814D42D2FC81A12002E08BC /* ddlManager */,
 				D814D43D2FC81A13002E08BC /* ddlManagerTests */,
 				D814D4472FC81A13002E08BC /* ddlManagerUITests */,
-				D814D42C2FC81A12002E08BC /* Products */,
+				D8B4CF7B2FCEDF9500A20287 /* Untitled.swift */,
+				D879777B2FCEFC5A00E0370F /* ddlManager.app */,
+				D879777C2FCEFC5A00E0370F /* ddlManagerTests.xctest */,
+				D879777D2FCEFC5A00E0370F /* ddlManagerUITests.xctest */,
 			);
-			sourceTree = "<group>";
-		};
-		D814D42C2FC81A12002E08BC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D814D42B2FC81A12002E08BC /* ddlManager.app */,
-				D814D43A2FC81A13002E08BC /* ddlManagerTests.xctest */,
-				D814D4442FC81A13002E08BC /* ddlManagerUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,7 +112,7 @@
 			packageProductDependencies = (
 			);
 			productName = ddlManager;
-			productReference = D814D42B2FC81A12002E08BC /* ddlManager.app */;
+			productReference = D879777B2FCEFC5A00E0370F /* ddlManager.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D814D4392FC81A13002E08BC /* ddlManagerTests */ = {
@@ -137,7 +135,7 @@
 			packageProductDependencies = (
 			);
 			productName = ddlManagerTests;
-			productReference = D814D43A2FC81A13002E08BC /* ddlManagerTests.xctest */;
+			productReference = D879777C2FCEFC5A00E0370F /* ddlManagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D814D4432FC81A13002E08BC /* ddlManagerUITests */ = {
@@ -160,7 +158,7 @@
 			packageProductDependencies = (
 			);
 			productName = ddlManagerUITests;
-			productReference = D814D4442FC81A13002E08BC /* ddlManagerUITests.xctest */;
+			productReference = D879777D2FCEFC5A00E0370F /* ddlManagerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +194,7 @@
 			mainGroup = D814D4222FC81A12002E08BC;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = D814D42C2FC81A12002E08BC /* Products */;
+			productRefGroup = D814D4222FC81A12002E08BC;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -236,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B4CF7C2FCEDF9600A20287 /* Untitled.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
