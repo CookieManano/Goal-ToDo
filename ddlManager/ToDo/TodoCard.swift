@@ -25,6 +25,10 @@ struct TodoCard: View {
                     Text(todo.note)
                         .font(.headline)
                 }
+                Spacer()
+                Text(todo.forIdea?.ideaName ?? "")
+                    .foregroundStyle(.secondary)
+                    .fontWeight(.black)
             }
             Divider()
             HStack {
@@ -42,5 +46,5 @@ struct TodoCard: View {
 }
 
 #Preview {
-    TodoCard(todo: Todo(title: "回家", note: "坐地铁", endDate: .now, startDate: .now, place: "BISTU", ideaName: "Code"))
+    TodoCard(todo: Todo(title: "回家", note: "坐地铁", endDate: .now, startDate: .now, place: "BISTU"))
 }

@@ -3,7 +3,9 @@ import SwiftData
 import SwiftUI
 
 struct TodoList: View {
-    @Query(sort: \Todo.ideaName) private var todos: [Todo]
+    @Query private var todos: [Todo]
+    @Environment(\.modelContext) private var context
+    @State var newTodo: Todo?
     
     var body: some View {
         NavigationStack{
@@ -15,14 +17,20 @@ struct TodoList: View {
                 }
             }
             .navigationTitle("ToDo")
+            
+            .sheet(item: $newTodo){todo in
+                TodoSheet(todo: todo)
+                    .interactiveDismissDisabled()
+            }
+            
             .toolbar {
                 ToolbarItem(placement: .confirmationAction){
                     Menu{
                         Button{
-                            
+                            addTodo()
                         }label: {
                             Label("Index",systemImage: "line.horizontal.3.decrease.circle")
-                                .font(.title3)        // 调整字体大小
+                                .font(.title3)
                                 .padding(.vertical, 6)
                         }
                     }label: {
@@ -30,6 +38,17 @@ struct TodoList: View {
                     }
                 }
             }
+        }
+    }
+    internal func addTodo(){
+        let newTodo = Todo( title: "", note: "", endDate: .now, startDate: .now, place: "")
+        context.insert(newTodo)
+        self.newTodo = newTodo
+    }
+    
+    private func deleteTodo(indexes: IndexSet){
+        for index in indexes{
+            context.delete(todos[index])
         }
     }
 }

@@ -7,6 +7,7 @@ class Idea {
     var content: String
     var date: Date
     var color: String
+    var toDo = [Todo]()
 
     init(ideaName: String, content: String, date: Date, color: String = "Short-Term") {
         self.ideaName = ideaName

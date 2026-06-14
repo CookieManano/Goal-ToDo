@@ -6,6 +6,7 @@ struct IdeaSheet: View {
     @Bindable var idea: Idea
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
+    @State var newTodo: Todo?
 
     var body: some View {
         NavigationStack {
@@ -52,13 +53,18 @@ struct IdeaSheet: View {
                         .tag("blue")
                     }
                 }
+                Section{
+                    ForEach(idea.toDo){todo in
+                        Text(todo.title)
+                    }
+                }
                 Button {
-                    Text("123")
+                    addTodo()
                 } label: {
                     HStack{
                         Spacer()
                         Image(systemName:"plus")
-                        Text("Add ToDo to start")
+                        Text(idea.toDo.isEmpty ? "Add ToDo to start" : "Add ToDo")
                             .padding(.top,1)
                         Spacer()
                     }
@@ -67,7 +73,13 @@ struct IdeaSheet: View {
                 .listRowInsets(EdgeInsets())
                 .padding(.top,-40)
             }
+            .navigationTitle("New Idea")
+            .navigationBarTitleDisplayMode(.inline)
             .listRowInsets(EdgeInsets())
+            .sheet(item: $newTodo){todo in
+                TodoSheet(todo: todo)
+                    .interactiveDismissDisabled()
+            }
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save", systemImage: "checkmark.circle") {
@@ -87,8 +99,14 @@ struct IdeaSheet: View {
             }
         }
     }
+    
+    internal func addTodo(){
+        let newTodo = Todo( title: "", note: "", endDate: .now, startDate: .now, place: "")
+        context.insert(newTodo)
+        self.newTodo = newTodo
+    }
+    
 }
-
 #Preview {
     IdeaSheet(idea: SampleData.shared.idea)
 }

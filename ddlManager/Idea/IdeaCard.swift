@@ -13,18 +13,23 @@ struct IdeaCard: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(idea.ideaName)
-                .font(.title)
-                .fontWeight(.black)
-                .foregroundStyle(ideaColor)
-            Text(idea.content)
-                .font(.title3)
-            Text(idea.date, style: .date)
-                .font(.body)
-                .foregroundStyle(.secondary)
-                .frame(maxWidth: .infinity, alignment: .trailing)
-        }
+        NavigationLink(destination: IdeaDetail(idea: idea)){
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(idea.ideaName)
+                        .font(.title)
+                        .fontWeight(.black)
+                        .foregroundStyle(ideaColor)
+                    Text(idea.content)
+                        .font(.title3)
+                    HStack{
+                        
+                        Text(idea.date, style: .date)
+                            .font(.body)
+                            .foregroundStyle(.secondary)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                    }
+                }
+        }.buttonStyle(.plain)
         .padding(.horizontal, 20)
         .padding(.vertical, 16)
         .background(
